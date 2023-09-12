@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		04D5D82D2AAF200600642858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5D82C2AAF200600642858 /* AppDelegate.swift */; };
-		04D5D82F2AAF200600642858 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5D82E2AAF200600642858 /* SceneDelegate.swift */; };
 		04D5D8312AAF200600642858 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5D8302AAF200600642858 /* HomeViewController.swift */; };
 		04D5D8342AAF200600642858 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D5D8322AAF200600642858 /* Main.storyboard */; };
 		04D5D8362AAF200A00642858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D5D8352AAF200A00642858 /* Assets.xcassets */; };
@@ -27,7 +26,6 @@
 /* Begin PBXFileReference section */
 		04D5D8292AAF200600642858 /* MarvelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D5D82C2AAF200600642858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04D5D82E2AAF200600642858 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		04D5D8302AAF200600642858 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		04D5D8332AAF200600642858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04D5D8352AAF200A00642858 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,7 +81,6 @@
 				04D5D8552AB00CA300642858 /* View */,
 				04D5D8562AB00CB800642858 /* Controller */,
 				04D5D82C2AAF200600642858 /* AppDelegate.swift */,
-				04D5D82E2AAF200600642858 /* SceneDelegate.swift */,
 				04D5D8352AAF200A00642858 /* Assets.xcassets */,
 				04D5D8372AAF200A00642858 /* LaunchScreen.storyboard */,
 				04D5D83A2AAF200A00642858 /* Info.plist */,
@@ -259,7 +256,6 @@
 				04D5D8602AB00D8700642858 /* ComicViewController.swift in Sources */,
 				04D5D85D2AB00D7800642858 /* SearchViewController.swift in Sources */,
 				04D5D8632AB00D9700642858 /* FavoriteViewController.swift in Sources */,
-				04D5D82F2AAF200600642858 /* SceneDelegate.swift in Sources */,
 				04D5D86F2AB00E1B00642858 /* Comic.swift in Sources */,
 				04D5D8722AB00EE000642858 /* InformationDetailViewController.swift in Sources */,
 				04D5D8662AB00DC600642858 /* ComicDetailViewController.swift in Sources */,
