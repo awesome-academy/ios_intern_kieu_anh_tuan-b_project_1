@@ -1,0 +1,6 @@
+target 'MarvelApp' do
+  use_frameworks!
+
+pod 'SwiftLint', '0.42.0'
+
+end
