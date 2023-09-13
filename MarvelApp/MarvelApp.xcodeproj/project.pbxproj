@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0466450D2AB0715E00E1B0E2 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466450C2AB0715E00E1B0E2 /* APICaller.swift */; };
+		046645102AB071C200E1B0E2 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466450F2AB071C200E1B0E2 /* Endpoint.swift */; };
+		046645132AB1535400E1B0E2 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046645122AB1535400E1B0E2 /* Thumbnail.swift */; };
+		0466451A2AB15CE700E1B0E2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046645192AB15CE700E1B0E2 /* Event.swift */; };
+		0466451D2AB15E2300E1B0E2 /* Seri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466451C2AB15E2300E1B0E2 /* Seri.swift */; };
+		046645222AB1654200E1B0E2 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046645212AB1654200E1B0E2 /* Key.swift */; };
 		04D5D82D2AAF200600642858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5D82C2AAF200600642858 /* AppDelegate.swift */; };
 		04D5D8312AAF200600642858 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5D8302AAF200600642858 /* HomeViewController.swift */; };
 		04D5D8342AAF200600642858 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D5D8322AAF200600642858 /* Main.storyboard */; };
@@ -24,6 +30,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0466450C2AB0715E00E1B0E2 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		0466450F2AB071C200E1B0E2 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		046645122AB1535400E1B0E2 /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
+		046645192AB15CE700E1B0E2 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		0466451C2AB15E2300E1B0E2 /* Seri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seri.swift; sourceTree = "<group>"; };
+		046645212AB1654200E1B0E2 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		04D5D8292AAF200600642858 /* MarvelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D5D82C2AAF200600642858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04D5D8302AAF200600642858 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0466450B2AB0712700E1B0E2 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0466450C2AB0715E00E1B0E2 /* APICaller.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		04D5D8202AAF200600642858 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +97,7 @@
 		04D5D82B2AAF200600642858 /* MarvelApp */ = {
 			isa = PBXGroup;
 			children = (
+				0466450B2AB0712700E1B0E2 /* Manager */,
 				04D5D8542AB00C9D00642858 /* Model */,
 				04D5D8552AB00CA300642858 /* View */,
 				04D5D8562AB00CB800642858 /* Controller */,
@@ -94,6 +115,11 @@
 				04D5D8682AB00E0800642858 /* Character.swift */,
 				04D5D86B2AB00E1200642858 /* Creator.swift */,
 				04D5D86E2AB00E1B00642858 /* Comic.swift */,
+				046645192AB15CE700E1B0E2 /* Event.swift */,
+				0466451C2AB15E2300E1B0E2 /* Seri.swift */,
+				0466450F2AB071C200E1B0E2 /* Endpoint.swift */,
+				046645122AB1535400E1B0E2 /* Thumbnail.swift */,
+				046645212AB1654200E1B0E2 /* Key.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -256,9 +282,15 @@
 				04D5D8602AB00D8700642858 /* ComicViewController.swift in Sources */,
 				04D5D85D2AB00D7800642858 /* SearchViewController.swift in Sources */,
 				04D5D8632AB00D9700642858 /* FavoriteViewController.swift in Sources */,
+				046645132AB1535400E1B0E2 /* Thumbnail.swift in Sources */,
+				0466451D2AB15E2300E1B0E2 /* Seri.swift in Sources */,
 				04D5D86F2AB00E1B00642858 /* Comic.swift in Sources */,
 				04D5D8722AB00EE000642858 /* InformationDetailViewController.swift in Sources */,
+				0466450D2AB0715E00E1B0E2 /* APICaller.swift in Sources */,
 				04D5D8662AB00DC600642858 /* ComicDetailViewController.swift in Sources */,
+				046645102AB071C200E1B0E2 /* Endpoint.swift in Sources */,
+				046645222AB1654200E1B0E2 /* Key.swift in Sources */,
+				0466451A2AB15CE700E1B0E2 /* Event.swift in Sources */,
 				04D5D8692AB00E0800642858 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

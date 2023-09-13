@@ -7,5 +7,24 @@
 
 import Foundation
 
-struct Comic {
+struct ComicsData: Codable {
+    var data: ComicsResponse
+}
+
+struct ComicsResponse: Codable {
+    var results: [Comic]
+}
+
+struct Comic: Codable {
+    var id: Int
+    var title: String?
+    var description: String?
+    var thumbnail: Thumbnail?
+    var images: [Thumbnail]?
+    var prices: [Price]?
+}
+
+struct Price: Codable {
+    var type: String
+    var price: Float
 }
