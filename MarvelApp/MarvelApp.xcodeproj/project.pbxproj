@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04656D242AB7FD2600B2746F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04656D222AB7FD2600B2746F /* SearchViewController.swift */; };
+		04656D252AB7FD2600B2746F /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04656D232AB7FD2600B2746F /* SearchViewController.xib */; };
+		04656D292AB7FD3D00B2746F /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04656D272AB7FD3D00B2746F /* SearchTableViewCell.swift */; };
+		04656D2A2AB7FD3D00B2746F /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04656D282AB7FD3D00B2746F /* SearchTableViewCell.xib */; };
+		04656D2D2AB7FFC900B2746F /* SearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04656D2C2AB7FFC900B2746F /* SearchBarExtension.swift */; };
+		04656D372AB8077A00B2746F /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04656D362AB8077A00B2746F /* ImageExtension.swift */; };
+		04656D3F2AB82D6700B2746F /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04656D3E2AB82D6700B2746F /* ButtonExtension.swift */; };
 		0466450D2AB0715E00E1B0E2 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466450C2AB0715E00E1B0E2 /* APICaller.swift */; };
 		046645102AB071C200E1B0E2 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466450F2AB071C200E1B0E2 /* Endpoint.swift */; };
 		046645132AB1535400E1B0E2 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046645122AB1535400E1B0E2 /* Thumbnail.swift */; };
@@ -25,7 +32,6 @@
 		04D5D8312AAF200600642858 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5D8302AAF200600642858 /* HomeViewController.swift */; };
 		04D5D8362AAF200A00642858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D5D8352AAF200A00642858 /* Assets.xcassets */; };
 		04D5D8392AAF200A00642858 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D5D8372AAF200A00642858 /* LaunchScreen.storyboard */; };
-		04D5D85D2AB00D7800642858 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5D85C2AB00D7800642858 /* SearchViewController.swift */; };
 		04D5D8632AB00D9700642858 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5D8622AB00D9700642858 /* FavoriteViewController.swift */; };
 		04D5D8662AB00DC600642858 /* ComicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5D8652AB00DC600642858 /* ComicDetailViewController.swift */; };
 		04D5D8692AB00E0800642858 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5D8682AB00E0800642858 /* Character.swift */; };
@@ -42,6 +48,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04656D222AB7FD2600B2746F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		04656D232AB7FD2600B2746F /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		04656D272AB7FD3D00B2746F /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		04656D282AB7FD3D00B2746F /* SearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		04656D2C2AB7FFC900B2746F /* SearchBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarExtension.swift; sourceTree = "<group>"; };
+		04656D362AB8077A00B2746F /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		04656D3E2AB82D6700B2746F /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 		0466450C2AB0715E00E1B0E2 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		0466450F2AB071C200E1B0E2 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		046645122AB1535400E1B0E2 /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
@@ -62,7 +75,6 @@
 		04D5D8352AAF200A00642858 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04D5D8382AAF200A00642858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04D5D83A2AAF200A00642858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04D5D85C2AB00D7800642858 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		04D5D8622AB00D9700642858 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		04D5D8652AB00DC600642858 /* ComicDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailViewController.swift; sourceTree = "<group>"; };
 		04D5D8682AB00E0800642858 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -92,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04656D212AB7FD2600B2746F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				04656D222AB7FD2600B2746F /* SearchViewController.swift */,
+				04656D232AB7FD2600B2746F /* SearchViewController.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		0466450B2AB0712700E1B0E2 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				0487CA1A2AB7EA7A0074C38C /* StringExtension.swift */,
+				04656D2C2AB7FFC900B2746F /* SearchBarExtension.swift */,
+				04656D362AB8077A00B2746F /* ImageExtension.swift */,
+				04656D3E2AB82D6700B2746F /* ButtonExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -189,7 +213,7 @@
 				0487CA312AB7F0B40074C38C /* Comic */,
 				04F660782AB1B7D5002E7D8C /* Home */,
 				04F6606F2AB19D56002E7D8C /* TabBar */,
-				04D5D85C2AB00D7800642858 /* SearchViewController.swift */,
+				04656D212AB7FD2600B2746F /* Search */,
 				04D5D8622AB00D9700642858 /* FavoriteViewController.swift */,
 				04D5D8652AB00DC600642858 /* ComicDetailViewController.swift */,
 				04D5D8712AB00EE000642858 /* InformationDetailViewController.swift */,
@@ -219,6 +243,8 @@
 			children = (
 				0487CA372AB7F0CD0074C38C /* ComicTableViewCell.swift */,
 				0487CA382AB7F0CD0074C38C /* ComicTableViewCell.xib */,
+				04656D272AB7FD3D00B2746F /* SearchTableViewCell.swift */,
+				04656D282AB7FD3D00B2746F /* SearchTableViewCell.xib */,
 				04F660812AB363C0002E7D8C /* SlideCollectionViewCell.swift */,
 				04F660822AB363C0002E7D8C /* SlideCollectionViewCell.xib */,
 				0487CA272AB7EADE0074C38C /* ThumbnailCollectionViewCell.swift */,
@@ -306,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04D5D8392AAF200A00642858 /* LaunchScreen.storyboard in Resources */,
+				04656D2A2AB7FD3D00B2746F /* SearchTableViewCell.xib in Resources */,
 				0487CA2A2AB7EADE0074C38C /* ThumbnailCollectionViewCell.xib in Resources */,
 				04F660742AB1B681002E7D8C /* HomeViewController.xib in Resources */,
 				04D5D8362AAF200A00642858 /* Assets.xcassets in Resources */,
@@ -313,6 +340,7 @@
 				0487CA3A2AB7F0CE0074C38C /* ComicTableViewCell.xib in Resources */,
 				0487CA292AB7EADE0074C38C /* ThumbnailTableViewCell.xib in Resources */,
 				04F660842AB363C0002E7D8C /* SlideCollectionViewCell.xib in Resources */,
+				04656D252AB7FD2600B2746F /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,19 +397,23 @@
 				0487CA282AB7EADE0074C38C /* ThumbnailTableViewCell.swift in Sources */,
 				04D5D82D2AAF200600642858 /* AppDelegate.swift in Sources */,
 				04D5D86C2AB00E1200642858 /* Creator.swift in Sources */,
-				04D5D85D2AB00D7800642858 /* SearchViewController.swift in Sources */,
 				04D5D8632AB00D9700642858 /* FavoriteViewController.swift in Sources */,
 				04F6606C2AB19D4F002E7D8C /* AppTabBarController.swift in Sources */,
 				04F660832AB363C0002E7D8C /* SlideCollectionViewCell.swift in Sources */,
+				04656D292AB7FD3D00B2746F /* SearchTableViewCell.swift in Sources */,
 				046645132AB1535400E1B0E2 /* Thumbnail.swift in Sources */,
 				0487CA1F2AB7EA820074C38C /* Constant.swift in Sources */,
+				04656D2D2AB7FFC900B2746F /* SearchBarExtension.swift in Sources */,
 				04D5D86F2AB00E1B00642858 /* Comic.swift in Sources */,
 				04D5D8722AB00EE000642858 /* InformationDetailViewController.swift in Sources */,
+				04656D242AB7FD2600B2746F /* SearchViewController.swift in Sources */,
+				04656D372AB8077A00B2746F /* ImageExtension.swift in Sources */,
 				04F660612AB19BFE002E7D8C /* Series.swift in Sources */,
 				0466450D2AB0715E00E1B0E2 /* APICaller.swift in Sources */,
 				04D5D8662AB00DC600642858 /* ComicDetailViewController.swift in Sources */,
 				046645102AB071C200E1B0E2 /* Endpoint.swift in Sources */,
 				0487CA342AB7F0B40074C38C /* ComicViewController.swift in Sources */,
+				04656D3F2AB82D6700B2746F /* ButtonExtension.swift in Sources */,
 				0487CA2B2AB7EADE0074C38C /* ThumbnailCollectionViewCell.swift in Sources */,
 				0487CA392AB7F0CE0074C38C /* ComicTableViewCell.swift in Sources */,
 				0487CA1B2AB7EA7A0074C38C /* StringExtension.swift in Sources */,
