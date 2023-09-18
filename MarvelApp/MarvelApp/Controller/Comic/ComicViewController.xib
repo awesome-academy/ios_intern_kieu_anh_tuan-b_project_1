@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComicViewController" customModule="MarvelApp" customModuleProvider="target">
+            <connections>
+                <outlet property="comicTableView" destination="7m3-Ee-wo8" id="Ysl-uv-GNr"/>
+                <outlet property="view" destination="iN0-l3-epB" id="MCT-zr-Vlf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="T9s-DY-YcJ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comics Market" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTe-zw-qQZ">
+                    <rect key="frame" x="85" y="68" width="244" height="43"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                    <color key="textColor" red="0.97634307320000002" green="1" blue="0.98652024739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7m3-Ee-wo8">
+                    <rect key="frame" x="0.0" y="143" width="414" height="753"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="dTe-zw-qQZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="0mp-Ns-rEP"/>
+                <constraint firstAttribute="bottom" secondItem="7m3-Ee-wo8" secondAttribute="bottom" id="7VX-iW-Qdc"/>
+                <constraint firstItem="7m3-Ee-wo8" firstAttribute="top" secondItem="dTe-zw-qQZ" secondAttribute="bottom" constant="32" id="BK2-8a-iJw"/>
+                <constraint firstItem="dTe-zw-qQZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="CvK-MP-gYO"/>
+                <constraint firstItem="7m3-Ee-wo8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Pep-Uf-LWX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="T9s-DY-YcJ" secondAttribute="trailing" id="Sst-Yi-9wZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7m3-Ee-wo8" secondAttribute="trailing" id="bzY-VM-eEL"/>
+                <constraint firstAttribute="bottom" secondItem="T9s-DY-YcJ" secondAttribute="bottom" id="kpH-0j-UTb"/>
+                <constraint firstItem="T9s-DY-YcJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="u8n-Uo-ai9"/>
+                <constraint firstItem="T9s-DY-YcJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="xug-mi-cPj"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="90"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="background" width="375" height="812"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

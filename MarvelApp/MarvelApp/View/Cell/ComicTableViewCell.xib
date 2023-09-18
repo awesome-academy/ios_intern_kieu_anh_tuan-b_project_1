@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComicTableViewCell" customModule="MarvelApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="comic" rowHeight="270" id="KGk-i7-Jjw" customClass="ComicTableViewCell" customModule="MarvelApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="429" height="270"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="429" height="270"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test3" translatesAutoresizingMaskIntoConstraints="NO" id="RlM-TD-yzF">
+                        <rect key="frame" x="16" y="8" width="180" height="254"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="180" id="cW6-Qn-zMJ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AVENGERS #12 (2019)" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LlV-aO-60T">
+                        <rect key="frame" x="220" y="0.0" width="193" height="87.5"/>
+                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="32"/>
+                        <color key="textColor" red="0.97634307320000002" green="1" blue="0.98652024739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syB-Sz-gx6">
+                        <rect key="frame" x="220" y="99.5" width="81" height="44"/>
+                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="32"/>
+                        <color key="textColor" red="0.97634307320000002" green="1" blue="0.98652024739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epu-Me-HzW">
+                        <rect key="frame" x="309" y="99.5" width="78.5" height="44"/>
+                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="32"/>
+                        <color key="textColor" systemColor="systemRedColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vd5-Nt-BTV">
+                        <rect key="frame" x="220" y="159.5" width="39.5" height="33"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <state key="normal" image="suit.heart" catalog="system">
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="32"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvW-Ha-N86">
+                        <rect key="frame" x="220" y="222" width="193" height="40"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="kgD-IO-xd0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                        <state key="normal" title="PREVIEW">
+                            <color key="titleColor" red="0.97634307320000002" green="1" blue="0.98652024739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </state>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doc.richtext.he" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LCa-k4-HTS">
+                        <rect key="frame" x="228" y="230" width="24" height="24"/>
+                        <color key="tintColor" red="0.97634307320000002" green="1" blue="0.98652024739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="7pF-w3-LKc"/>
+                            <constraint firstAttribute="height" constant="24" id="iDb-aZ-htQ"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="Epu-Me-HzW" firstAttribute="top" secondItem="LlV-aO-60T" secondAttribute="bottom" constant="12" id="34f-Pe-l8W"/>
+                    <constraint firstItem="LCa-k4-HTS" firstAttribute="leading" secondItem="RlM-TD-yzF" secondAttribute="trailing" constant="32" id="B1V-sO-Ls9"/>
+                    <constraint firstItem="LlV-aO-60T" firstAttribute="leading" secondItem="RlM-TD-yzF" secondAttribute="trailing" constant="24" id="DLA-FP-5Qc"/>
+                    <constraint firstAttribute="bottom" secondItem="RlM-TD-yzF" secondAttribute="bottom" constant="8" id="Jxb-pJ-kfQ"/>
+                    <constraint firstAttribute="trailing" secondItem="OvW-Ha-N86" secondAttribute="trailing" constant="16" id="N2u-6Y-o6N"/>
+                    <constraint firstItem="Epu-Me-HzW" firstAttribute="leading" secondItem="syB-Sz-gx6" secondAttribute="trailing" constant="8" id="OdZ-gN-bbE"/>
+                    <constraint firstItem="syB-Sz-gx6" firstAttribute="top" secondItem="LlV-aO-60T" secondAttribute="bottom" constant="12" id="P4I-rY-lt0"/>
+                    <constraint firstItem="syB-Sz-gx6" firstAttribute="leading" secondItem="RlM-TD-yzF" secondAttribute="trailing" constant="24" id="Pwp-t5-3Eu"/>
+                    <constraint firstItem="RlM-TD-yzF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="TtF-Y6-r0t"/>
+                    <constraint firstItem="OvW-Ha-N86" firstAttribute="leading" secondItem="RlM-TD-yzF" secondAttribute="trailing" constant="24" id="aHw-4p-4EV"/>
+                    <constraint firstAttribute="trailing" secondItem="LlV-aO-60T" secondAttribute="trailing" constant="16" id="eaD-sB-4hN"/>
+                    <constraint firstItem="vd5-Nt-BTV" firstAttribute="top" secondItem="syB-Sz-gx6" secondAttribute="bottom" constant="16" id="erp-zm-E2C"/>
+                    <constraint firstItem="LlV-aO-60T" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ig1-fT-Zxc"/>
+                    <constraint firstAttribute="bottom" secondItem="OvW-Ha-N86" secondAttribute="bottom" constant="8" id="mnO-cF-x7u"/>
+                    <constraint firstItem="RlM-TD-yzF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="pqP-Yu-I0Y"/>
+                    <constraint firstItem="vd5-Nt-BTV" firstAttribute="leading" secondItem="RlM-TD-yzF" secondAttribute="trailing" constant="24" id="rul-se-kIB"/>
+                    <constraint firstAttribute="bottom" secondItem="LCa-k4-HTS" secondAttribute="bottom" constant="16" id="tTo-zg-1mA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <point key="canvasLocation" x="210.86956521739131" y="159.375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="doc.richtext.he" catalog="system" width="115" height="128"/>
+        <image name="suit.heart" catalog="system" width="128" height="109"/>
+        <image name="test3" width="640" height="640"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
