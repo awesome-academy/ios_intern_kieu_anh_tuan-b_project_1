@@ -13,4 +13,5 @@ struct Constant {
     static let sectionLabelWidth = CGFloat(100)
     static let paddingHorizontal = CGFloat(16)
     static let titleSize = CGFloat(24)
+    static let comicCellHeight = CGFloat(270)
 }

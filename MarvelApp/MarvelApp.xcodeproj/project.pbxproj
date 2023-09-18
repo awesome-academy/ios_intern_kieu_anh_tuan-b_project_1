@@ -13,11 +13,14 @@
 		0466451A2AB15CE700E1B0E2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046645192AB15CE700E1B0E2 /* Event.swift */; };
 		0487CA1B2AB7EA7A0074C38C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487CA1A2AB7EA7A0074C38C /* StringExtension.swift */; };
 		0487CA1F2AB7EA820074C38C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487CA1E2AB7EA820074C38C /* Constant.swift */; };
-		0487CA222AB7EAC20074C38C /* ComicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487CA212AB7EAC20074C38C /* ComicViewController.swift */; };
 		0487CA282AB7EADE0074C38C /* ThumbnailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487CA242AB7EADE0074C38C /* ThumbnailTableViewCell.swift */; };
 		0487CA292AB7EADE0074C38C /* ThumbnailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0487CA252AB7EADE0074C38C /* ThumbnailTableViewCell.xib */; };
 		0487CA2A2AB7EADE0074C38C /* ThumbnailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0487CA262AB7EADE0074C38C /* ThumbnailCollectionViewCell.xib */; };
 		0487CA2B2AB7EADE0074C38C /* ThumbnailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487CA272AB7EADE0074C38C /* ThumbnailCollectionViewCell.swift */; };
+		0487CA342AB7F0B40074C38C /* ComicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487CA322AB7F0B40074C38C /* ComicViewController.swift */; };
+		0487CA352AB7F0B40074C38C /* ComicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0487CA332AB7F0B40074C38C /* ComicViewController.xib */; };
+		0487CA392AB7F0CE0074C38C /* ComicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487CA372AB7F0CD0074C38C /* ComicTableViewCell.swift */; };
+		0487CA3A2AB7F0CE0074C38C /* ComicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0487CA382AB7F0CD0074C38C /* ComicTableViewCell.xib */; };
 		04D5D82D2AAF200600642858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5D82C2AAF200600642858 /* AppDelegate.swift */; };
 		04D5D8312AAF200600642858 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5D8302AAF200600642858 /* HomeViewController.swift */; };
 		04D5D8362AAF200A00642858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D5D8352AAF200A00642858 /* Assets.xcassets */; };
@@ -45,11 +48,14 @@
 		046645192AB15CE700E1B0E2 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		0487CA1A2AB7EA7A0074C38C /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		0487CA1E2AB7EA820074C38C /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		0487CA212AB7EAC20074C38C /* ComicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicViewController.swift; sourceTree = "<group>"; };
 		0487CA242AB7EADE0074C38C /* ThumbnailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailTableViewCell.swift; sourceTree = "<group>"; };
 		0487CA252AB7EADE0074C38C /* ThumbnailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThumbnailTableViewCell.xib; sourceTree = "<group>"; };
 		0487CA262AB7EADE0074C38C /* ThumbnailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThumbnailCollectionViewCell.xib; sourceTree = "<group>"; };
 		0487CA272AB7EADE0074C38C /* ThumbnailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailCollectionViewCell.swift; sourceTree = "<group>"; };
+		0487CA322AB7F0B40074C38C /* ComicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicViewController.swift; sourceTree = "<group>"; };
+		0487CA332AB7F0B40074C38C /* ComicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComicViewController.xib; sourceTree = "<group>"; };
+		0487CA372AB7F0CD0074C38C /* ComicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicTableViewCell.swift; sourceTree = "<group>"; };
+		0487CA382AB7F0CD0074C38C /* ComicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComicTableViewCell.xib; sourceTree = "<group>"; };
 		04D5D8292AAF200600642858 /* MarvelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D5D82C2AAF200600642858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04D5D8302AAF200600642858 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +114,15 @@
 				0487CA1E2AB7EA820074C38C /* Constant.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		0487CA312AB7F0B40074C38C /* Comic */ = {
+			isa = PBXGroup;
+			children = (
+				0487CA322AB7F0B40074C38C /* ComicViewController.swift */,
+				0487CA332AB7F0B40074C38C /* ComicViewController.xib */,
+			);
+			path = Comic;
 			sourceTree = "<group>";
 		};
 		04D5D8202AAF200600642858 = {
@@ -171,10 +186,10 @@
 		04D5D8562AB00CB800642858 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0487CA312AB7F0B40074C38C /* Comic */,
 				04F660782AB1B7D5002E7D8C /* Home */,
 				04F6606F2AB19D56002E7D8C /* TabBar */,
 				04D5D85C2AB00D7800642858 /* SearchViewController.swift */,
-				0487CA212AB7EAC20074C38C /* ComicViewController.swift */,
 				04D5D8622AB00D9700642858 /* FavoriteViewController.swift */,
 				04D5D8652AB00DC600642858 /* ComicDetailViewController.swift */,
 				04D5D8712AB00EE000642858 /* InformationDetailViewController.swift */,
@@ -202,6 +217,8 @@
 		04F6607A2AB361A6002E7D8C /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				0487CA372AB7F0CD0074C38C /* ComicTableViewCell.swift */,
+				0487CA382AB7F0CD0074C38C /* ComicTableViewCell.xib */,
 				04F660812AB363C0002E7D8C /* SlideCollectionViewCell.swift */,
 				04F660822AB363C0002E7D8C /* SlideCollectionViewCell.xib */,
 				0487CA272AB7EADE0074C38C /* ThumbnailCollectionViewCell.swift */,
@@ -292,6 +309,8 @@
 				0487CA2A2AB7EADE0074C38C /* ThumbnailCollectionViewCell.xib in Resources */,
 				04F660742AB1B681002E7D8C /* HomeViewController.xib in Resources */,
 				04D5D8362AAF200A00642858 /* Assets.xcassets in Resources */,
+				0487CA352AB7F0B40074C38C /* ComicViewController.xib in Resources */,
+				0487CA3A2AB7F0CE0074C38C /* ComicTableViewCell.xib in Resources */,
 				0487CA292AB7EADE0074C38C /* ThumbnailTableViewCell.xib in Resources */,
 				04F660842AB363C0002E7D8C /* SlideCollectionViewCell.xib in Resources */,
 			);
@@ -349,7 +368,6 @@
 				04D5D8312AAF200600642858 /* HomeViewController.swift in Sources */,
 				0487CA282AB7EADE0074C38C /* ThumbnailTableViewCell.swift in Sources */,
 				04D5D82D2AAF200600642858 /* AppDelegate.swift in Sources */,
-				0487CA222AB7EAC20074C38C /* ComicViewController.swift in Sources */,
 				04D5D86C2AB00E1200642858 /* Creator.swift in Sources */,
 				04D5D85D2AB00D7800642858 /* SearchViewController.swift in Sources */,
 				04D5D8632AB00D9700642858 /* FavoriteViewController.swift in Sources */,
@@ -363,7 +381,9 @@
 				0466450D2AB0715E00E1B0E2 /* APICaller.swift in Sources */,
 				04D5D8662AB00DC600642858 /* ComicDetailViewController.swift in Sources */,
 				046645102AB071C200E1B0E2 /* Endpoint.swift in Sources */,
+				0487CA342AB7F0B40074C38C /* ComicViewController.swift in Sources */,
 				0487CA2B2AB7EADE0074C38C /* ThumbnailCollectionViewCell.swift in Sources */,
+				0487CA392AB7F0CE0074C38C /* ComicTableViewCell.swift in Sources */,
 				0487CA1B2AB7EA7A0074C38C /* StringExtension.swift in Sources */,
 				04F660642AB19C6D002E7D8C /* CategoryType.swift in Sources */,
 				0466451A2AB15CE700E1B0E2 /* Event.swift in Sources */,
