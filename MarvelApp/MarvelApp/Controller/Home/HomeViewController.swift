@@ -8,80 +8,44 @@
 import UIKit
 
 final class HomeViewController: UIViewController {
-    @IBOutlet private weak var slideCollectionView: UICollectionView!
     @IBOutlet private weak var homeTableView: UITableView!
 
-    // TODO: fix later
-    private let images = [
-        UIImage(named: "test1"),
-        UIImage(named: "test2"),
-        UIImage(named: "test3")
-    ]
-    private var currentIndex = 0
-    private var timer: Timer?
-    private let sectionTitles = ["Heroes", "Creator", "Event", "Seri"]
+    private var slides: [Character] = []
+
+    private let sectionTitles = ["Heroes", "Creators", "Events", "Series"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        startTimer()
-        slideCollectionView.register(
-            UINib(nibName: String(describing: SlideCollectionViewCell.self),
-                  bundle: nil), forCellWithReuseIdentifier: "slide")
-        slideCollectionView.delegate = self
-        slideCollectionView.dataSource = self
+
         homeTableView.register(
             UINib(nibName: String(describing: ThumbnailTableViewCell.self),
-                                     bundle: nil), forCellReuseIdentifier: "thumbnail")
+                  bundle: nil), forCellReuseIdentifier: "thumbnail")
+        homeTableView.register(UINib(nibName: String(describing: SlideTableViewCell.self),
+                                     bundle: nil), forCellReuseIdentifier: "slideTable")
+
         homeTableView.delegate = self
         homeTableView.dataSource = self
-
     }
 
-    private func startTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 3.0,
-                                     target: self,
-                                     selector: #selector(changeSlide), userInfo: nil, repeats: true)
-    }
-
-    @objc private func changeSlide() {
-        let desiredScrollPosition = (currentIndex < images.count - 1) ? currentIndex + 1 : 0
-        currentIndex = desiredScrollPosition
-        let rect = slideCollectionView.layoutAttributesForItem(
-            at: IndexPath(row: desiredScrollPosition, section: 0))?.frame
-        if let rect = rect {
-            slideCollectionView.scrollRectToVisible(rect, animated: true)
+    func configureCell(result: Result<[OverviewInformation], Error>, cell: ThumbnailTableViewCell) {
+        switch result {
+        case .success(let value):
+            cell.configure(value)
+        case .failure(let error):
+            self.showAlert(message: error.localizedDescription, controller: self)
         }
     }
 }
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
-    }
-}
-
-extension HomeViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView,
-                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: "slide", for: indexPath) as? SlideCollectionViewCell {
-            cell.image = images[indexPath.item]
-            return cell
-        }
-        return UICollectionViewCell()
-    }
-}
-
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+        return slides.count
     }
 }
 
 extension HomeViewController: UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return sectionTitles.count
+        return sectionTitles.count + 1
     }
 }
 
@@ -91,11 +55,49 @@ extension HomeViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = homeTableView.dequeueReusableCell(
-            withIdentifier: "thumbnail", for: indexPath) as? ThumbnailTableViewCell {
-            return cell
+        if indexPath.section == HomeSection.slide.rawValue {
+            guard let slideCell = homeTableView.dequeueReusableCell(
+                    withIdentifier: "slideTable", for: indexPath) as? SlideTableViewCell else {
+                return UITableViewCell()
+            }
+            APICaller.shared.getInformation(dataType: CharactersData.self,
+                                            categoryType: CategoryType.character) {  [weak self] result in
+                switch result {
+                case .success(let slidesData):
+                    slideCell.configure(slidesData.data.results)
+                case .failure(let error):
+                    self?.showAlert(message: error.localizedDescription, controller: self)
+                }
+            }
+            return slideCell
         }
-        return UITableViewCell()
+
+        guard let cell = homeTableView.dequeueReusableCell(
+                withIdentifier: "thumbnail", for: indexPath) as? ThumbnailTableViewCell else {
+            return UITableViewCell()
+        }
+
+        switch indexPath.section {
+        case HomeSection.heroes.rawValue:
+            APICaller.shared.getOverviewInformation(categoryType: CategoryType.character) { [weak self] result in
+                self?.configureCell(result: result, cell: cell)
+            }
+        case HomeSection.creators.rawValue:
+            APICaller.shared.getOverviewInformation(categoryType: CategoryType.creator) { [weak self] result in
+                self?.configureCell(result: result, cell: cell)
+            }
+        case HomeSection.events.rawValue:
+            APICaller.shared.getOverviewInformation(categoryType: CategoryType.event) { [weak self] result in
+                self?.configureCell(result: result, cell: cell)
+            }
+        case HomeSection.series.rawValue:
+            APICaller.shared.getOverviewInformation(categoryType: CategoryType.series) { [weak self] result in
+                self?.configureCell(result: result, cell: cell)
+            }
+        default:
+            return UITableViewCell()
+        }
+        return cell
     }
 
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
@@ -112,10 +114,10 @@ extension HomeViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionTitles[section]
+        section != HomeSection.slide.rawValue ? sectionTitles[section - 1] : nil
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return Constant.thumbnailHeight
+        indexPath.section != HomeSection.slide.rawValue ? Constant.thumbnailHeight : Constant.thumbnailHeight * 2
     }
 }
