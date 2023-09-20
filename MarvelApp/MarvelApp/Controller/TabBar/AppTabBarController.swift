@@ -8,10 +8,10 @@
 import UIKit
 
 final class AppTabBarController: UITabBarController {
-    private let homeViewController = HomeViewController()
-    private let searchViewController = SearchViewController()
-    private let comicViewController = ComicViewController()
-    private let favoriteViewController = FavoriteViewController()
+    private let homeViewController = UINavigationController(rootViewController: HomeViewController())
+    private let searchViewController = UINavigationController(rootViewController: SearchViewController())
+    private let comicViewController = UINavigationController(rootViewController: ComicViewController())
+    private let favoriteViewController = UINavigationController(rootViewController: FavoriteViewController())
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,11 +7,16 @@
 
 import UIKit
 
+protocol ThumbnailTableViewCellDelegate: AnyObject {
+    func thumbnailTableViewCellDidTapCell(_ cell: ThumbnailTableViewCell, information: OverviewInformation)
+}
+
 final class ThumbnailTableViewCell: UITableViewCell {
 
     @IBOutlet private weak var thumbnailCollectionView: UICollectionView!
 
     private var thumbnails = [OverviewInformation]()
+    weak var delegate: ThumbnailTableViewCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -60,5 +65,11 @@ extension ThumbnailTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width / 3, height: collectionView.frame.height - 12)
+    }
+}
+
+extension ThumbnailTableViewCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.delegate?.thumbnailTableViewCellDidTapCell(self, information: thumbnails[indexPath.row])
     }
 }
