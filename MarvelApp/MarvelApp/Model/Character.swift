@@ -17,6 +17,7 @@ struct CharactersResponse: Codable {
 
 struct Character: Codable {
     var id: Int
+    var name: String?
     var title: String?
     var description: String?
     var startYear: Int?

@@ -7,7 +7,15 @@
 
 import UIKit
 
-class ThumbnailCollectionViewCell: UICollectionViewCell {
+final class ThumbnailCollectionViewCell: UICollectionViewCell {
+    @IBOutlet private weak var thumbnailImageView: UIImageView!
+
+    var image: UIImage? {
+        didSet {
+            thumbnailImageView.image = image
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
