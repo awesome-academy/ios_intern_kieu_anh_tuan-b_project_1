@@ -23,6 +23,8 @@
 		04656D6B2AB99C8800B2746F /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04656D6A2AB99C8800B2746F /* ImageProvider.swift */; };
 		04656D6E2AB9A11500B2746F /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04656D6D2AB9A11500B2746F /* ImageExtension.swift */; };
 		04656D752AB9AD8B00B2746F /* SlideCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04656D742AB9AD8B00B2746F /* SlideCollectionView.swift */; };
+		04656D832AB9FFAE00B2746F /* DataPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04656D822AB9FFAE00B2746F /* DataPersistenceManager.swift */; };
+		04656D872ABA013D00B2746F /* ItemModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04656D852ABA013D00B2746F /* ItemModel.xcdatamodeld */; };
 		0466450D2AB0715E00E1B0E2 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466450C2AB0715E00E1B0E2 /* APICaller.swift */; };
 		046645102AB071C200E1B0E2 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466450F2AB071C200E1B0E2 /* Endpoint.swift */; };
 		046645132AB1535400E1B0E2 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046645122AB1535400E1B0E2 /* Thumbnail.swift */; };
@@ -73,6 +75,8 @@
 		04656D6A2AB99C8800B2746F /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 		04656D6D2AB9A11500B2746F /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		04656D742AB9AD8B00B2746F /* SlideCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCollectionView.swift; sourceTree = "<group>"; };
+		04656D822AB9FFAE00B2746F /* DataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceManager.swift; sourceTree = "<group>"; };
+		04656D862ABA013D00B2746F /* ItemModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ItemModel.xcdatamodel; sourceTree = "<group>"; };
 		0466450C2AB0715E00E1B0E2 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		0466450F2AB071C200E1B0E2 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		046645122AB1535400E1B0E2 /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				0466450C2AB0715E00E1B0E2 /* APICaller.swift */,
+				04656D822AB9FFAE00B2746F /* DataPersistenceManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 				04D5D8372AAF200A00642858 /* LaunchScreen.storyboard */,
 				04D5D83A2AAF200A00642858 /* Info.plist */,
 				04656D472AB83D9400B2746F /* key.plist */,
+				04656D852ABA013D00B2746F /* ItemModel.xcdatamodeld */,
 			);
 			path = MarvelApp;
 			sourceTree = "<group>";
@@ -442,11 +448,13 @@
 				04F660612AB19BFE002E7D8C /* Series.swift in Sources */,
 				0466450D2AB0715E00E1B0E2 /* APICaller.swift in Sources */,
 				04656D642AB9968C00B2746F /* ViewControllerExtension.swift in Sources */,
+				04656D832AB9FFAE00B2746F /* DataPersistenceManager.swift in Sources */,
 				04D5D8662AB00DC600642858 /* ComicDetailViewController.swift in Sources */,
 				046645102AB071C200E1B0E2 /* Endpoint.swift in Sources */,
 				0487CA342AB7F0B40074C38C /* ComicViewController.swift in Sources */,
 				04656D3F2AB82D6700B2746F /* ButtonExtension.swift in Sources */,
 				0487CA2B2AB7EADE0074C38C /* ThumbnailCollectionViewCell.swift in Sources */,
+				04656D872ABA013D00B2746F /* ItemModel.xcdatamodeld in Sources */,
 				0487CA392AB7F0CE0074C38C /* ComicTableViewCell.swift in Sources */,
 				0487CA1B2AB7EA7A0074C38C /* StringExtension.swift in Sources */,
 				04656D522AB8A22F00B2746F /* HomeSection.swift in Sources */,
@@ -651,6 +659,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		04656D852ABA013D00B2746F /* ItemModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				04656D862ABA013D00B2746F /* ItemModel.xcdatamodel */,
+			);
+			currentVersion = 04656D862ABA013D00B2746F /* ItemModel.xcdatamodel */;
+			path = ItemModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 04D5D8212AAF200600642858 /* Project object */;
 }
