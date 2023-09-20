@@ -64,7 +64,6 @@ final class SearchViewController: UIViewController {
         category = CategoryType.character
         setSelectedButton(characterButton)
         getSearchResult()
-
     }
 
     @IBAction private func creatorButtonTapped(_ sender: Any) {
