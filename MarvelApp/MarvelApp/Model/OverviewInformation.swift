@@ -18,4 +18,7 @@ struct OverviewResponse: Codable {
 struct OverviewInformation: Codable {
     var id: Int
     var thumbnail: Thumbnail
+    var name: String?
+    var fullName: String?
+    var title: String?
 }

@@ -14,4 +14,5 @@ struct Constant {
     static let paddingHorizontal = CGFloat(16)
     static let titleSize = CGFloat(24)
     static let comicCellHeight = CGFloat(270)
+    static let searchResultHeight = CGFloat(100)
 }
