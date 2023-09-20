@@ -19,20 +19,23 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zgz-yF-3FP">
                         <rect key="frame" x="16" y="4" width="288" height="92"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test2" translatesAutoresizingMaskIntoConstraints="NO" id="9hW-vO-u8h">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="9hW-vO-u8h">
                                 <rect key="frame" x="0.0" y="0.0" width="92" height="92"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9hW-vO-u8h" secondAttribute="height" multiplier="1:1" id="0md-oo-zo9"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBL-h4-lwn">
-                                <rect key="frame" x="112" y="29.5" width="59" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBL-h4-lwn">
+                                <rect key="frame" x="112" y="29.5" width="112" height="33"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
                                 <color key="textColor" red="0.97634307320000002" green="1" blue="0.98652024739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kL-Fx-Edu">
                                 <rect key="frame" x="244" y="32.5" width="28" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="XoB-T2-9SA"/>
+                                </constraints>
                                 <color key="tintColor" red="0.97634307320000002" green="1" blue="0.98652024739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="arrow.forward.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
@@ -48,6 +51,7 @@
                             <constraint firstItem="mBL-h4-lwn" firstAttribute="centerY" secondItem="Zgz-yF-3FP" secondAttribute="centerY" id="GOQ-Sb-DYv"/>
                             <constraint firstItem="9hW-vO-u8h" firstAttribute="top" secondItem="Zgz-yF-3FP" secondAttribute="top" id="Q0v-d6-zGx"/>
                             <constraint firstItem="mBL-h4-lwn" firstAttribute="leading" secondItem="9hW-vO-u8h" secondAttribute="trailing" constant="20" id="jOp-d4-Dp1"/>
+                            <constraint firstItem="9kL-Fx-Edu" firstAttribute="leading" secondItem="mBL-h4-lwn" secondAttribute="trailing" constant="20" id="yj2-9a-b6g"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -61,11 +65,15 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="resultImageView" destination="9hW-vO-u8h" id="HP4-5N-wZz"/>
+                <outlet property="resultLabel" destination="mBL-h4-lwn" id="RWt-pH-Tco"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="103.125"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="arrow.forward.circle" catalog="system" width="128" height="121"/>
-        <image name="test2" width="225" height="225"/>
+        <image name="imagePlaceholder" width="612" height="612"/>
     </resources>
 </document>

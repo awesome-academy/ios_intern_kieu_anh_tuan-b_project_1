@@ -54,20 +54,30 @@ class APICaller {
             } catch {
                 completion(.failure(APIError.failedToGetData))
             }
-
         }
         task.resume()
     }
 
-    func getOverviewInformation(categoryType: CategoryType,
+    func getOverviewInformation(searchValue: String? = nil, categoryType: CategoryType,
                                 completion: @escaping (Result<[OverviewInformation], Error>) -> Void) {
 
         guard let apiIdentifier = self.apiIdentifier() else {
             return
         }
 
+        var searchParameter = ""
+
+        if let value = searchValue {
+            searchParameter = categoryType == CategoryType.comic
+                ? "titleStartsWith=\(value)&"
+                : "nameStartsWith=\(value)&"
+        }
+
+        let categoryIdentifier = "/v1/public/\(categoryType.rawValue)"
+
         guard let url = URL(
-                string: "\(Endpoint.baseURL)/v1/public/\(categoryType.rawValue)?\(apiIdentifier)") else { return }
+                string: "\(Endpoint.baseURL)\(categoryIdentifier)?\(searchParameter)\(apiIdentifier)")
+        else { return }
 
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
             guard let data = data, error == nil else {
@@ -79,8 +89,8 @@ class APICaller {
             } catch {
                 completion(.failure(APIError.failedToGetData))
             }
-
         }
+
         task.resume()
     }
 }

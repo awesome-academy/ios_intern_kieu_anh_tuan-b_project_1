@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="429" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test3" translatesAutoresizingMaskIntoConstraints="NO" id="RlM-TD-yzF">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="RlM-TD-yzF">
                         <rect key="frame" x="16" y="8" width="180" height="254"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="180" id="cW6-Qn-zMJ"/>
@@ -31,12 +31,15 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syB-Sz-gx6">
                         <rect key="frame" x="220" y="99.5" width="81" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="81" id="ALD-Mk-wwS"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="32"/>
                         <color key="textColor" red="0.97634307320000002" green="1" blue="0.98652024739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epu-Me-HzW">
-                        <rect key="frame" x="309" y="99.5" width="78.5" height="44"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epu-Me-HzW">
+                        <rect key="frame" x="309" y="99.5" width="104" height="44"/>
                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="32"/>
                         <color key="textColor" systemColor="systemRedColor"/>
                         <nil key="highlightedColor"/>
@@ -83,6 +86,7 @@
                     <constraint firstAttribute="trailing" secondItem="LlV-aO-60T" secondAttribute="trailing" constant="16" id="eaD-sB-4hN"/>
                     <constraint firstItem="vd5-Nt-BTV" firstAttribute="top" secondItem="syB-Sz-gx6" secondAttribute="bottom" constant="16" id="erp-zm-E2C"/>
                     <constraint firstItem="LlV-aO-60T" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ig1-fT-Zxc"/>
+                    <constraint firstAttribute="trailing" secondItem="Epu-Me-HzW" secondAttribute="trailing" constant="16" id="klU-8T-bH9"/>
                     <constraint firstAttribute="bottom" secondItem="OvW-Ha-N86" secondAttribute="bottom" constant="8" id="mnO-cF-x7u"/>
                     <constraint firstItem="RlM-TD-yzF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="pqP-Yu-I0Y"/>
                     <constraint firstItem="vd5-Nt-BTV" firstAttribute="leading" secondItem="RlM-TD-yzF" secondAttribute="trailing" constant="24" id="rul-se-kIB"/>
@@ -91,13 +95,18 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="comicImageView" destination="RlM-TD-yzF" id="zmc-y9-hPP"/>
+                <outlet property="priceLabel" destination="Epu-Me-HzW" id="ayL-7Y-Zhg"/>
+                <outlet property="titleLabel" destination="LlV-aO-60T" id="wyS-bW-dvK"/>
+            </connections>
             <point key="canvasLocation" x="210.86956521739131" y="159.375"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="doc.richtext.he" catalog="system" width="115" height="128"/>
+        <image name="imagePlaceholder" width="612" height="612"/>
         <image name="suit.heart" catalog="system" width="128" height="109"/>
-        <image name="test3" width="640" height="640"/>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
