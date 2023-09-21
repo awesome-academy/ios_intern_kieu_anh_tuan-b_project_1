@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04420EF82ABB4484007F9308 /* InformationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04420EF72ABB4484007F9308 /* InformationDetailViewController.xib */; };
 		04656D242AB7FD2600B2746F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04656D222AB7FD2600B2746F /* SearchViewController.swift */; };
 		04656D252AB7FD2600B2746F /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04656D232AB7FD2600B2746F /* SearchViewController.xib */; };
 		04656D292AB7FD3D00B2746F /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04656D272AB7FD3D00B2746F /* SearchTableViewCell.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04420EF72ABB4484007F9308 /* InformationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationDetailViewController.xib; sourceTree = "<group>"; };
 		04656D222AB7FD2600B2746F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		04656D232AB7FD2600B2746F /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		04656D272AB7FD3D00B2746F /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				04D5D8622AB00D9700642858 /* FavoriteViewController.swift */,
 				04D5D8652AB00DC600642858 /* ComicDetailViewController.swift */,
 				04D5D8712AB00EE000642858 /* InformationDetailViewController.swift */,
+				04420EF72ABB4484007F9308 /* InformationDetailViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				0487CA2A2AB7EADE0074C38C /* ThumbnailCollectionViewCell.xib in Resources */,
 				04F660742AB1B681002E7D8C /* HomeViewController.xib in Resources */,
 				04656D482AB83D9400B2746F /* key.plist in Resources */,
+				04420EF82ABB4484007F9308 /* InformationDetailViewController.xib in Resources */,
 				04D5D8362AAF200A00642858 /* Assets.xcassets in Resources */,
 				0487CA352AB7F0B40074C38C /* ComicViewController.xib in Resources */,
 				04656D5C2AB97E9C00B2746F /* SlideTableViewCell.xib in Resources */,

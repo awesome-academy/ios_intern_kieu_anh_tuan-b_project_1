@@ -25,6 +25,7 @@ final class HomeViewController: UIViewController {
 
         homeTableView.delegate = self
         homeTableView.dataSource = self
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
     func configureCell(result: Result<[OverviewInformation], Error>, cell: ThumbnailTableViewCell) {
@@ -60,6 +61,7 @@ extension HomeViewController: UITableViewDataSource {
                     withIdentifier: "slideTable", for: indexPath) as? SlideTableViewCell else {
                 return UITableViewCell()
             }
+
             APICaller.shared.getInformation(dataType: CharactersData.self,
                                             categoryType: CategoryType.character) {  [weak self] result in
                 switch result {
@@ -76,6 +78,8 @@ extension HomeViewController: UITableViewDataSource {
                 withIdentifier: "thumbnail", for: indexPath) as? ThumbnailTableViewCell else {
             return UITableViewCell()
         }
+
+        cell.delegate = self
 
         switch indexPath.section {
         case HomeSection.heroes.rawValue:
@@ -119,5 +123,13 @@ extension HomeViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         indexPath.section != HomeSection.slide.rawValue ? Constant.thumbnailHeight : Constant.thumbnailHeight * 2
+    }
+}
+
+extension HomeViewController: ThumbnailTableViewCellDelegate {
+    func thumbnailTableViewCellDidTapCell(_ cell: ThumbnailTableViewCell, information: OverviewInformation) {
+        let detailVC = InformationDetailViewController()
+        detailVC.id = information.id
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }
