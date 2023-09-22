@@ -17,6 +17,8 @@ final class ComicTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
 
+    var goDetail: (() -> Void)?
+
     public func configure(comic: Comic) {
         titleLabel.text = comic.title
 
@@ -36,5 +38,9 @@ final class ComicTableViewCell: UITableViewCell {
                 }
             }
         }
+    }
+
+    @IBAction func previewButtonTapped(_ sender: Any) {
+        goDetail?()
     }
 }

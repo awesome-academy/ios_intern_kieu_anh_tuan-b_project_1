@@ -21,6 +21,7 @@ final class ComicViewController: UIViewController {
         comicTableView.delegate = self
         comicTableView.dataSource = self
         getComics()
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
     private func getComics() {
@@ -54,6 +55,12 @@ extension ComicViewController: UITableViewDataSource {
         if let cell = comicTableView.dequeueReusableCell(
             withIdentifier: "comic", for: indexPath) as? ComicTableViewCell {
             cell.configure(comic: comics[indexPath.row])
+            cell.goDetail = {
+                let comicDetail = ComicDetailViewController()
+                comicDetail.comic = self.comics[indexPath.row]
+                self.navigationController?.pushViewController(comicDetail, animated: true)
+            }
+
             return cell
         }
         return UITableViewCell()
