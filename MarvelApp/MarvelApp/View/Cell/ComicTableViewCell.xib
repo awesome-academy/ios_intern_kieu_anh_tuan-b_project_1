@@ -61,6 +61,10 @@
                         <state key="normal" title="PREVIEW">
                             <color key="titleColor" red="0.97634307320000002" green="1" blue="0.98652024739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </state>
+                        <connections>
+                            <action selector="previewButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0mU-sa-wvM"/>
+                            <action selector="previewButtonTapped:" destination="-1" eventType="touchUpInside" id="YOh-0E-Pxg"/>
+                        </connections>
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doc.richtext.he" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LCa-k4-HTS">
                         <rect key="frame" x="228" y="230" width="24" height="24"/>

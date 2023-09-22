@@ -17,4 +17,5 @@ struct Constant {
     static let searchResultHeight = CGFloat(100)
     static let detailImageHeight = CGFloat(500)
     static let detailSectionHeight = CGFloat(80)
+    static let comicPreviewHeight = CGFloat(500)
 }
