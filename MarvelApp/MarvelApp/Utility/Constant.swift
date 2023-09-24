@@ -18,4 +18,8 @@ struct Constant {
     static let detailImageHeight = CGFloat(500)
     static let detailSectionHeight = CGFloat(80)
     static let comicPreviewHeight = CGFloat(500)
+    static let imageDetailSize = CGFloat(120)
+    static let expandRows = 2
+    static let defaultRows = 1
+    static let emptyString = ""
 }

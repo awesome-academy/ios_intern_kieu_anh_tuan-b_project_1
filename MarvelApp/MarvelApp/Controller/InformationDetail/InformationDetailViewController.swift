@@ -7,27 +7,24 @@
 
 import UIKit
 
-// TODO: Test, fix later
 struct CellData {
     var opened: Bool
     var title: String
-    var sectionData: [String]
+    var sectionDetail: String
 }
 
 final class InformationDetailViewController: UIViewController {
     @IBOutlet private weak var detailTableView: UITableView!
 
-    // TODO: Test Data, fix later
-    private var detailTableViewData = [
-        CellData(opened: false, title: "Storyline", sectionData: ["Cell1", "Cell2", "Cell3", "Cell4"]),
-        CellData(opened: false, title: "Comics", sectionData: ["Cell1", "Cell2"]),
-        CellData(opened: false, title: "Series", sectionData: ["Cell1", "Cell2", "Cell3"])
-    ]
+    private var detailTableViewData = [CellData]()
+
+    var  overviewInformation: OverviewInformation?
 
     private var nibFiles = [
         NibFile(nibName: String(describing: InformationImageTableViewCell.self), identifier: "informationImage"),
         NibFile(nibName: String(describing: InformationSectionTableViewCell.self), identifier: "informationSection"),
-        NibFile(nibName: String(describing: InformationDetailTableViewCell.self), identifier: "informationDetail")
+        NibFile(nibName: String(describing: InformationDetailTableViewCell.self), identifier: "informationDetail"),
+        NibFile(nibName: String(describing: MediaDetailTableViewCell.self), identifier: "mediaTable")
     ]
 
     override func viewDidLoad() {
@@ -36,6 +33,7 @@ final class InformationDetailViewController: UIViewController {
         for nib in nibFiles {
             detailTableView.register(UINib(nibName: nib.nibName, bundle: nil), forCellReuseIdentifier: nib.identifier)
         }
+        configureData()
         detailTableView.delegate = self
         detailTableView.dataSource = self
     }
@@ -43,12 +41,80 @@ final class InformationDetailViewController: UIViewController {
     @IBAction private func backButtonTapped(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+
+    private func configureData() {
+        if let description = overviewInformation?.description, description != "" {
+            detailTableViewData.append(
+                CellData(
+                    opened: false,
+                    title: DetailSectionLabel.story.rawValue,
+                    sectionDetail: description
+                )
+            )
+        }
+        if let comics = overviewInformation?.comics {
+            detailTableViewData.append(
+                CellData(
+                    opened: false,
+                    title: DetailSectionLabel.comic.rawValue,
+                    sectionDetail: comics.collectionURI ?? comics.resourceURI ?? Constant.emptyString
+                )
+            )
+        }
+        if let creators = overviewInformation?.creators {
+            detailTableViewData.append(
+                CellData(
+                    opened: false,
+                    title: DetailSectionLabel.creator.rawValue,
+                    sectionDetail: creators.collectionURI ?? creators.resourceURI ?? Constant.emptyString
+                )
+            )
+        }
+        if let characters = overviewInformation?.characters {
+            detailTableViewData.append(
+                CellData(
+                    opened: false,
+                    title: DetailSectionLabel.character.rawValue,
+                    sectionDetail: characters.collectionURI ?? characters.resourceURI ?? Constant.emptyString
+                )
+            )
+        }
+        if let series = overviewInformation?.series {
+            detailTableViewData.append(
+                CellData(
+                    opened: false,
+                    title: DetailSectionLabel.series.rawValue,
+                    sectionDetail: series.collectionURI ?? series.resourceURI ?? Constant.emptyString
+                )
+            )
+        }
+        if let events = overviewInformation?.events {
+            detailTableViewData.append(
+                CellData(
+                    opened: false,
+                    title: DetailSectionLabel.event.rawValue,
+                    sectionDetail: events.collectionURI ?? events.resourceURI ?? Constant.emptyString
+                )
+            )
+        }
+    }
+
+    private func configureCell(result: Result<[OverviewInformation], Error>, cell: MediaDetailTableViewCell) {
+        switch result {
+        case .success(let value):
+            cell.configure(value)
+        case .failure(let error):
+            self.showAlert(message: error.localizedDescription, controller: self)
+        }
+    }
 }
 
 extension InformationDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == DetailSection.image.rawValue { return Constant.detailImageHeight }
-        return Constant.detailSectionHeight
+        if indexPath.section == DetailSection.image.rawValue {
+            return Constant.detailImageHeight
+        }
+        return UITableView.automaticDimension
     }
 }
 
@@ -59,9 +125,9 @@ extension InformationDetailViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section > DetailSection.image.rawValue && detailTableViewData[section - 1].opened {
-            return detailTableViewData[section - 1].sectionData.count + 1
+            return Constant.expandRows
         } else {
-            return 1
+            return Constant.defaultRows
         }
     }
 
@@ -69,6 +135,7 @@ extension InformationDetailViewController: UITableViewDataSource {
         if indexPath.section == DetailSection.image.rawValue {
             if let cell = detailTableView.dequeueReusableCell(
                 withIdentifier: "informationImage", for: indexPath) as? InformationImageTableViewCell {
+                cell.configure(information: overviewInformation)
                 return cell
             }
             return UITableViewCell()
@@ -77,16 +144,30 @@ extension InformationDetailViewController: UITableViewDataSource {
         if indexPath.row == 0 {
             if let cell = detailTableView.dequeueReusableCell(
                 withIdentifier: "informationSection", for: indexPath) as? InformationSectionTableViewCell {
-                cell.configure(title: detailTableViewData[indexPath.section - 1].title)
-                cell.layer.addBorder(edge: UIRectEdge.bottom, color: .white, thickness: 1, horizontalPadding: 16)
+                let sectionData = detailTableViewData[indexPath.section - 1]
+                cell.configure(title: sectionData.title, isOpen: sectionData.opened)
                 return cell
             }
             return UITableViewCell()
         } else {
-            if let cell = detailTableView.dequeueReusableCell(
-                withIdentifier: "informationDetail", for: indexPath) as? InformationDetailTableViewCell {
-                cell.configure(title: detailTableViewData[indexPath.section - 1].sectionData[indexPath.row - 1])
-                return cell
+            if detailTableViewData[indexPath.section - 1].title == DetailSectionLabel.story.rawValue {
+                if let cell = detailTableView.dequeueReusableCell(
+                    withIdentifier: "informationDetail", for: indexPath) as? InformationDetailTableViewCell {
+                    cell.configure(title: detailTableViewData[indexPath.section - 1].sectionDetail)
+                    return cell
+                }
+            } else {
+                if let cell = detailTableView.dequeueReusableCell(
+                    withIdentifier: "mediaTable", for: indexPath) as? MediaDetailTableViewCell {
+
+                    APICaller.shared.getSectionDetail(
+                        url: detailTableViewData[indexPath.section - 1].sectionDetail
+                    ) { [weak self] result in
+                        self?.configureCell(result: result, cell: cell)
+                    }
+                    cell.delegate = self
+                    return cell
+                }
             }
             return UITableViewCell()
         }
@@ -105,5 +186,13 @@ extension InformationDetailViewController: UITableViewDataSource {
             let sections = IndexSet.init(integer: indexPath.section)
             tableView.reloadSections(sections, with: .automatic)
         }
+    }
+}
+
+extension InformationDetailViewController: MediaTableViewCellDelegate {
+    func mediaTableViewCellDidTapCell(_ cell: MediaDetailTableViewCell, information: OverviewInformation) {
+        let detailVC = InformationDetailViewController()
+        detailVC.overviewInformation = information
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }

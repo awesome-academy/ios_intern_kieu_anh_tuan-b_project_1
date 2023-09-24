@@ -16,24 +16,17 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCV-Of-Qa7">
-                        <rect key="frame" x="16" y="12" width="59" height="33"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCV-Of-Qa7">
+                        <rect key="frame" x="16" y="16" width="288" height="25"/>
                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
                         <color key="textColor" red="0.97634307320000002" green="1" blue="0.98652024739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYr-ic-3a2">
-                        <rect key="frame" x="276" y="15" width="28" height="27"/>
-                        <color key="tintColor" red="0.97634307320000002" green="1" blue="0.98652024739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <state key="normal" image="arrow.forward.circle" catalog="system">
-                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
-                        </state>
-                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="MYr-ic-3a2" secondAttribute="trailing" constant="16" id="Ltm-cj-XKH"/>
-                    <constraint firstItem="JCV-Of-Qa7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XPI-KE-ToZ"/>
-                    <constraint firstItem="MYr-ic-3a2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bWP-Vy-fz6"/>
+                    <constraint firstAttribute="trailing" secondItem="JCV-Of-Qa7" secondAttribute="trailing" constant="16" id="PIx-mI-GDQ"/>
+                    <constraint firstAttribute="bottom" secondItem="JCV-Of-Qa7" secondAttribute="bottom" constant="16" id="SwF-4O-jCh"/>
+                    <constraint firstItem="JCV-Of-Qa7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="viq-Qr-rox"/>
                     <constraint firstItem="JCV-Of-Qa7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="xLv-EH-UnO"/>
                 </constraints>
             </tableViewCellContentView>
@@ -45,7 +38,4 @@
             <point key="canvasLocation" x="98.550724637681171" y="78.013392857142847"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="arrow.forward.circle" catalog="system" width="128" height="121"/>
-    </resources>
 </document>
