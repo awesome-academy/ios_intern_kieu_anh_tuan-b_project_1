@@ -44,7 +44,8 @@ final class SlideTableViewCell: UITableViewCell {
                                      selector: #selector(changeSlide), userInfo: nil, repeats: true)
     }
 
-    @objc private func changeSlide() {
+    @objc
+    private func changeSlide() {
         let desiredScrollPosition = (currentIndex < slides.count - 1) ? currentIndex + 1 : 0
         currentIndex = desiredScrollPosition
         let rect = slideCollectionView.layoutAttributesForItem(
@@ -69,8 +70,8 @@ extension SlideTableViewCell: UICollectionViewDataSource {
                     return UICollectionViewCell()
                 }
                 ImageProvider.shared.fetchData(url: url) { image in
-                    DispatchQueue.main.async {
-                        cell.configure(label: self.slides[indexPath.row].name, image: image)
+                    DispatchQueue.main.async { [weak self] in
+                        cell.configure(label: self?.slides[indexPath.row].name, image: image)
                     }
                 }
             }

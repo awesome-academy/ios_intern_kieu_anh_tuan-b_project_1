@@ -22,4 +22,6 @@ struct Constant {
     static let expandRows = 2
     static let defaultRows = 1
     static let emptyString = ""
+    static let notificationToFavorite = "favoriteChange"
+    static let notificationToComic = "comicChange"
 }
