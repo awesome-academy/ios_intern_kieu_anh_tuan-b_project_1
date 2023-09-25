@@ -21,7 +21,7 @@ final class DataPersistenceManager {
 
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "ItemModel")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+        container.loadPersistentStores(completionHandler: { (_, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
@@ -33,7 +33,9 @@ final class DataPersistenceManager {
         let context = persistentContainer.viewContext
         let item = Item(context: context)
         item.id = Int64(data.id)
-        item.thumbnailURL = data.thumbnail.path + "." + data.thumbnail.extension
+        item.thumbnailPath = data.thumbnail.path
+        item.thumbnailExtension = data.thumbnail.extension
+        item.title = data.name ?? data.fullName ?? data.title ?? Constant.emptyString
         do {
             try context.save()
             completion(.success(()))
@@ -73,7 +75,7 @@ final class DataPersistenceManager {
     func checkEntityExists(id: Int) -> Bool {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
         fetchRequest.fetchLimit =  1
-        fetchRequest.predicate = NSPredicate(format: "url == %d", id)
+        fetchRequest.predicate = NSPredicate(format: "id == %d", id)
         var entitiesCount = 0
 
         do {

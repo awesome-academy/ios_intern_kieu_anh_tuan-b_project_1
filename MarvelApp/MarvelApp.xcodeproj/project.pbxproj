@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040110E62AC1242F004F20E0 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040110E52AC1242F004F20E0 /* FavoriteViewController.xib */; };
 		042BA8B22ABC466C001B95AC /* DetailSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042BA8B12ABC466C001B95AC /* DetailSection.swift */; };
 		042BA8B52ABC4C9B001B95AC /* NibFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042BA8B42ABC4C9B001B95AC /* NibFile.swift */; };
 		04420F112ABBFCA0007F9308 /* InformationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04420F102ABBFCA0007F9308 /* InformationDetailViewController.xib */; };
@@ -76,6 +77,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040110E52AC1242F004F20E0 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		042BA8B12ABC466C001B95AC /* DetailSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSection.swift; sourceTree = "<group>"; };
 		042BA8B42ABC4C9B001B95AC /* NibFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibFile.swift; sourceTree = "<group>"; };
 		04420F102ABBFCA0007F9308 /* InformationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationDetailViewController.xib; sourceTree = "<group>"; };
@@ -160,6 +162,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040110E42AC12401004F20E0 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				04D5D8622AB00D9700642858 /* FavoriteViewController.swift */,
+				040110E52AC1242F004F20E0 /* FavoriteViewController.xib */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
 		04420F0F2ABBFC2D007F9308 /* InformationDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,13 +307,13 @@
 		04D5D8562AB00CB800642858 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				040110E42AC12401004F20E0 /* Favorite */,
 				045473A22ABD33CA00D55AF9 /* ComicDetail */,
 				04420F0F2ABBFC2D007F9308 /* InformationDetail */,
 				0487CA312AB7F0B40074C38C /* Comic */,
 				04F660782AB1B7D5002E7D8C /* Home */,
 				04F6606F2AB19D56002E7D8C /* TabBar */,
 				04656D212AB7FD2600B2746F /* Search */,
-				04D5D8622AB00D9700642858 /* FavoriteViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -445,6 +456,7 @@
 				045473BC2ABDA8A700D55AF9 /* MediaCollectionViewCell.xib in Resources */,
 				04656D5C2AB97E9C00B2746F /* SlideTableViewCell.xib in Resources */,
 				0487CA3A2AB7F0CE0074C38C /* ComicTableViewCell.xib in Resources */,
+				040110E62AC1242F004F20E0 /* FavoriteViewController.xib in Resources */,
 				04420F202ABC3263007F9308 /* InformationDetailTableViewCell.xib in Resources */,
 				0487CA292AB7EADE0074C38C /* ThumbnailTableViewCell.xib in Resources */,
 				04420F1B2ABC2312007F9308 /* InformationImageTableViewCell.xib in Resources */,

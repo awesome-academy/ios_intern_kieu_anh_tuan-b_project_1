@@ -46,10 +46,14 @@
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vd5-Nt-BTV">
                         <rect key="frame" x="220" y="159.5" width="39.5" height="33"/>
-                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" image="suit.heart" catalog="system">
                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="32"/>
                         </state>
+                        <connections>
+                            <action selector="favoriteButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="W3Z-BN-dSM"/>
+                            <action selector="favoriteButtonTapped:" destination="-1" eventType="touchUpInside" id="bUQ-Qx-kpx"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvW-Ha-N86">
                         <rect key="frame" x="220" y="222" width="193" height="40"/>
@@ -101,6 +105,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="comicImageView" destination="RlM-TD-yzF" id="zmc-y9-hPP"/>
+                <outlet property="favoriteButton" destination="vd5-Nt-BTV" id="vBQ-3A-Lsb"/>
                 <outlet property="priceLabel" destination="Epu-Me-HzW" id="ayL-7Y-Zhg"/>
                 <outlet property="titleLabel" destination="LlV-aO-60T" id="wyS-bW-dvK"/>
             </connections>

@@ -8,7 +8,7 @@
 import UIKit
 
 final class ComicDetailViewController: UIViewController {
-    var comic: Comic?
+    private var comic: Comic?
 
     @IBOutlet private weak var comicPreviewTableView: UITableView!
 
@@ -20,6 +20,10 @@ final class ComicDetailViewController: UIViewController {
                   bundle: nil), forCellReuseIdentifier: "comicPreview")
         comicPreviewTableView.delegate = self
         comicPreviewTableView.dataSource = self
+    }
+
+    public func setComic(_ comic: Comic) {
+        self.comic = comic
     }
 
     @IBAction func backButtonTapped(_ sender: Any) {
