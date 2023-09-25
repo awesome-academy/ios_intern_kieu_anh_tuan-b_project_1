@@ -9,42 +9,55 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InformationSectionTableViewCell" customModule="MarvelApp" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="informationSection" id="KGk-i7-Jjw" customClass="InformationSectionTableViewCell" customModule="MarvelApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="informationSection" rowHeight="52" id="KGk-i7-Jjw" customClass="InformationSectionTableViewCell" customModule="MarvelApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwf-Fw-rVu">
-                        <rect key="frame" x="16" y="5.5" width="253" height="33"/>
+                        <rect key="frame" x="16" y="16" width="253" height="20"/>
                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBK-ZX-MFN">
-                        <rect key="frame" x="285" y="11" width="19" height="22"/>
+                        <rect key="frame" x="285" y="16" width="19" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="19" id="YiH-dz-TYP"/>
                         </constraints>
                         <color key="tintColor" red="0.97634307320000002" green="1" blue="0.98652024739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <state key="normal" image="chevron.down" catalog="system"/>
                     </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hnx-Ig-Ti1">
+                        <rect key="frame" x="16" y="51" width="288" height="1"/>
+                        <color key="backgroundColor" red="0.97634307320000002" green="1" blue="0.98652024739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="izy-3W-Ipe"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="yBK-ZX-MFN" firstAttribute="leading" secondItem="qwf-Fw-rVu" secondAttribute="trailing" constant="16" id="2lI-CE-JAf"/>
+                    <constraint firstAttribute="bottom" secondItem="Hnx-Ig-Ti1" secondAttribute="bottom" id="3TO-Mk-DPu"/>
+                    <constraint firstItem="yBK-ZX-MFN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="7xn-WR-JPN"/>
+                    <constraint firstItem="Hnx-Ig-Ti1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="8ud-PP-AcV"/>
+                    <constraint firstAttribute="bottom" secondItem="yBK-ZX-MFN" secondAttribute="bottom" constant="16" id="E7y-gm-l7h"/>
+                    <constraint firstItem="qwf-Fw-rVu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="HIk-RZ-l8p"/>
                     <constraint firstAttribute="trailing" secondItem="yBK-ZX-MFN" secondAttribute="trailing" constant="16" id="Nya-D9-T1b"/>
                     <constraint firstItem="qwf-Fw-rVu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Ozy-9S-w5q"/>
-                    <constraint firstItem="yBK-ZX-MFN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Rv0-KJ-jEQ"/>
-                    <constraint firstItem="qwf-Fw-rVu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ZrR-vm-Zwn"/>
+                    <constraint firstAttribute="bottom" secondItem="qwf-Fw-rVu" secondAttribute="bottom" constant="16" id="QUP-G7-Rf7"/>
+                    <constraint firstAttribute="trailing" secondItem="Hnx-Ig-Ti1" secondAttribute="trailing" constant="16" id="agI-DP-VdE"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="expandButton" destination="yBK-ZX-MFN" id="pxZ-tb-fnt"/>
                 <outlet property="sectionLabel" destination="qwf-Fw-rVu" id="zkD-VR-hQc"/>
             </connections>
-            <point key="canvasLocation" x="93" y="104"/>
+            <point key="canvasLocation" x="92.753623188405811" y="106.47321428571428"/>
         </tableViewCell>
     </objects>
     <resources>

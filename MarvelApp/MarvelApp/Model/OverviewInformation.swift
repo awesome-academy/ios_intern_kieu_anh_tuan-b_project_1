@@ -21,4 +21,15 @@ struct OverviewInformation: Codable {
     var name: String?
     var fullName: String?
     var title: String?
+    var description: String?
+    var comics: DetailCategory?
+    var series: DetailCategory?
+    var events: DetailCategory?
+    var creators: DetailCategory?
+    var characters: DetailCategory?
+}
+
+struct DetailCategory: Codable {
+    var resourceURI: String?
+    var collectionURI: String?
 }

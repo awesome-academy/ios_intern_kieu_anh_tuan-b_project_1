@@ -20,6 +20,10 @@
 		045473AB2ABD37ED00D55AF9 /* ComicDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045473AA2ABD37ED00D55AF9 /* ComicDetailViewController.xib */; };
 		045473AF2ABD391200D55AF9 /* ComicPreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045473AD2ABD391200D55AF9 /* ComicPreviewTableViewCell.swift */; };
 		045473B02ABD391200D55AF9 /* ComicPreviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045473AE2ABD391200D55AF9 /* ComicPreviewTableViewCell.xib */; };
+		045473B62ABDA6F000D55AF9 /* MediaDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045473B42ABDA6F000D55AF9 /* MediaDetailTableViewCell.swift */; };
+		045473B72ABDA6F000D55AF9 /* MediaDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045473B52ABDA6F000D55AF9 /* MediaDetailTableViewCell.xib */; };
+		045473BB2ABDA8A700D55AF9 /* MediaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045473B92ABDA8A700D55AF9 /* MediaCollectionViewCell.swift */; };
+		045473BC2ABDA8A700D55AF9 /* MediaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045473BA2ABDA8A700D55AF9 /* MediaCollectionViewCell.xib */; };
 		04656D242AB7FD2600B2746F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04656D222AB7FD2600B2746F /* SearchViewController.swift */; };
 		04656D252AB7FD2600B2746F /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04656D232AB7FD2600B2746F /* SearchViewController.xib */; };
 		04656D292AB7FD3D00B2746F /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04656D272AB7FD3D00B2746F /* SearchTableViewCell.swift */; };
@@ -85,6 +89,10 @@
 		045473AA2ABD37ED00D55AF9 /* ComicDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComicDetailViewController.xib; sourceTree = "<group>"; };
 		045473AD2ABD391200D55AF9 /* ComicPreviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicPreviewTableViewCell.swift; sourceTree = "<group>"; };
 		045473AE2ABD391200D55AF9 /* ComicPreviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComicPreviewTableViewCell.xib; sourceTree = "<group>"; };
+		045473B42ABDA6F000D55AF9 /* MediaDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailTableViewCell.swift; sourceTree = "<group>"; };
+		045473B52ABDA6F000D55AF9 /* MediaDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaDetailTableViewCell.xib; sourceTree = "<group>"; };
+		045473B92ABDA8A700D55AF9 /* MediaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewCell.swift; sourceTree = "<group>"; };
+		045473BA2ABDA8A700D55AF9 /* MediaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaCollectionViewCell.xib; sourceTree = "<group>"; };
 		04656D222AB7FD2600B2746F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		04656D232AB7FD2600B2746F /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		04656D272AB7FD3D00B2746F /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -339,6 +347,10 @@
 				04420F1E2ABC3263007F9308 /* InformationDetailTableViewCell.xib */,
 				045473AD2ABD391200D55AF9 /* ComicPreviewTableViewCell.swift */,
 				045473AE2ABD391200D55AF9 /* ComicPreviewTableViewCell.xib */,
+				045473B42ABDA6F000D55AF9 /* MediaDetailTableViewCell.swift */,
+				045473B52ABDA6F000D55AF9 /* MediaDetailTableViewCell.xib */,
+				045473B92ABDA8A700D55AF9 /* MediaCollectionViewCell.swift */,
+				045473BA2ABDA8A700D55AF9 /* MediaCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -430,11 +442,13 @@
 				0487CA352AB7F0B40074C38C /* ComicViewController.xib in Resources */,
 				045473AB2ABD37ED00D55AF9 /* ComicDetailViewController.xib in Resources */,
 				045473B02ABD391200D55AF9 /* ComicPreviewTableViewCell.xib in Resources */,
+				045473BC2ABDA8A700D55AF9 /* MediaCollectionViewCell.xib in Resources */,
 				04656D5C2AB97E9C00B2746F /* SlideTableViewCell.xib in Resources */,
 				0487CA3A2AB7F0CE0074C38C /* ComicTableViewCell.xib in Resources */,
 				04420F202ABC3263007F9308 /* InformationDetailTableViewCell.xib in Resources */,
 				0487CA292AB7EADE0074C38C /* ThumbnailTableViewCell.xib in Resources */,
 				04420F1B2ABC2312007F9308 /* InformationImageTableViewCell.xib in Resources */,
+				045473B72ABDA6F000D55AF9 /* MediaDetailTableViewCell.xib in Resources */,
 				04F660842AB363C0002E7D8C /* SlideCollectionViewCell.xib in Resources */,
 				04656D252AB7FD2600B2746F /* SearchViewController.xib in Resources */,
 			);
@@ -499,7 +513,9 @@
 				04656D602AB9906F00B2746F /* ViewExtension.swift in Sources */,
 				04D5D8632AB00D9700642858 /* FavoriteViewController.swift in Sources */,
 				04F6606C2AB19D4F002E7D8C /* AppTabBarController.swift in Sources */,
+				045473BB2ABDA8A700D55AF9 /* MediaCollectionViewCell.swift in Sources */,
 				04420F232ABC3C56007F9308 /* LayerExtension.swift in Sources */,
+				045473B62ABDA6F000D55AF9 /* MediaDetailTableViewCell.swift in Sources */,
 				045473AF2ABD391200D55AF9 /* ComicPreviewTableViewCell.swift in Sources */,
 				04F660832AB363C0002E7D8C /* SlideCollectionViewCell.swift in Sources */,
 				04656D292AB7FD3D00B2746F /* SearchTableViewCell.swift in Sources */,
