@@ -19,8 +19,8 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="rub-FJ-t6s">
                         <rect key="frame" x="0.0" y="0.0" width="573" height="400"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWJ-Aj-k3x">
-                        <rect key="frame" x="24" y="340" width="525" height="44"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWJ-Aj-k3x">
+                        <rect key="frame" x="24" y="384" width="525" height="0.0"/>
                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="32"/>
                         <color key="textColor" red="0.97634307320000002" green="1" blue="0.98652024739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>

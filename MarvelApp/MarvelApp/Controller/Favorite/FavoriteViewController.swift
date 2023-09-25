@@ -90,11 +90,21 @@ extension FavoriteViewController: UITableViewDataSource {
         if let cell = favoriteTableView.dequeueReusableCell(
             withIdentifier: "search", for: indexPath) as? SearchTableViewCell {
             let item = favoriteItems[indexPath.row]
-            cell.configure(OverviewInformation(
-                            id: Int(item.id),
-                            thumbnail: Thumbnail(path: item.thumbnailPath ?? Constant.emptyString,
-                                                 extension: item.thumbnailExtension ?? Constant.emptyString),
-                            name: item.title))
+
+            let overviewInformation = OverviewInformation(
+                id: Int(item.id),
+                thumbnail: Thumbnail(path: item.thumbnailPath ?? Constant.emptyString,
+                                     extension: item.thumbnailExtension ?? Constant.emptyString),
+                name: item.title)
+            cell.configure(overviewInformation)
+            cell.goDetail = { [weak self] in
+                guard let self = self else {
+                    return
+                }
+                let detailVC = InformationDetailViewController()
+                detailVC.setInformationData(overviewInformation: overviewInformation)
+                self.navigationController?.pushViewController(detailVC, animated: true)
+            }
             return cell
         }
         return UITableViewCell()

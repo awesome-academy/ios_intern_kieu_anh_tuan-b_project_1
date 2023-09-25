@@ -18,7 +18,7 @@ final class InformationDetailViewController: UIViewController {
 
     private var detailTableViewData = [CellData]()
 
-    var  overviewInformation: OverviewInformation?
+    private var overviewInformation: OverviewInformation?
 
     private var nibFiles = [
         NibFile(nibName: String(describing: InformationImageTableViewCell.self), identifier: "informationImage"),
@@ -36,6 +36,10 @@ final class InformationDetailViewController: UIViewController {
         configureData()
         detailTableView.delegate = self
         detailTableView.dataSource = self
+    }
+
+    public func setInformationData(overviewInformation: OverviewInformation?) {
+        self.overviewInformation = overviewInformation
     }
 
     @IBAction private func backButtonTapped(_ sender: Any) {

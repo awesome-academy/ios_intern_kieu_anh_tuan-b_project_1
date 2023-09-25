@@ -68,6 +68,7 @@
             <connections>
                 <outlet property="resultImageView" destination="9hW-vO-u8h" id="HP4-5N-wZz"/>
                 <outlet property="resultLabel" destination="mBL-h4-lwn" id="RWt-pH-Tco"/>
+                <outlet property="resultView" destination="Zgz-yF-3FP" id="yTj-Re-Lga"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="103.125"/>
         </tableViewCell>
