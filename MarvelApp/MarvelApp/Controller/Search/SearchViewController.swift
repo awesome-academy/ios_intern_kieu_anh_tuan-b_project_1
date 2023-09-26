@@ -28,6 +28,7 @@ final class SearchViewController: UIViewController {
         searchTableView.dataSource = self
         searchBar.delegate = self
         setupUI()
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
     private func setupUI() {
@@ -94,6 +95,14 @@ extension SearchViewController: UITableViewDataSource {
         if let cell = searchTableView.dequeueReusableCell(
             withIdentifier: "search", for: indexPath) as? SearchTableViewCell {
             cell.configure(searchResult[indexPath.row])
+            cell.goDetail = { [weak self] in
+                guard let self = self else {
+                    return
+                }
+                let detailVC = InformationDetailViewController()
+                detailVC.setInformationData(overviewInformation: self.searchResult[indexPath.row])
+                self.navigationController?.pushViewController(detailVC, animated: true)
+            }
             return cell
         }
         return UITableViewCell()

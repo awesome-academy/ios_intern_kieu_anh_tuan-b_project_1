@@ -129,7 +129,7 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: ThumbnailTableViewCellDelegate {
     func thumbnailTableViewCellDidTapCell(_ cell: ThumbnailTableViewCell, information: OverviewInformation) {
         let detailVC = InformationDetailViewController()
-        detailVC.overviewInformation = information
+        detailVC.setInformationData(overviewInformation: information)
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }
