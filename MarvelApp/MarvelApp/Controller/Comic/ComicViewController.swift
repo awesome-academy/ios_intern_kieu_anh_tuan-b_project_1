@@ -11,7 +11,7 @@ final class ComicViewController: UIViewController {
     @IBOutlet private weak var comicTableView: UITableView!
 
     private var comics = [Comic]()
-    private var favoriteItems = [Item]()
+    private var defaultLimit = Constant.defaultLimit
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +52,25 @@ final class ComicViewController: UIViewController {
             }
         }
     }
+
+    private func loadMore() {
+        let queue = DispatchQueue(label: "loadMoreComic", qos: .utility)
+        queue.async { [unowned self] in
+            APICaller.shared.loadMoreInformation(loadMore: String(defaultLimit), dataType: ComicsData.self,
+                                                 categoryType: CategoryType.comic) {  [weak self] result in
+                switch result {
+                case .success(let comics):
+                    self?.comics.append(contentsOf: comics.data.results)
+                    DispatchQueue.main.async { [weak self] in
+                        self?.comicTableView.reloadData()
+                    }
+                case .failure(let error):
+                    self?.showAlert(message: error.localizedDescription, controller: self)
+                }
+            }
+        }
+    }
+
 }
 
 extension ComicViewController: UITableViewDelegate {
@@ -63,6 +82,15 @@ extension ComicViewController: UITableViewDelegate {
 extension ComicViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return comics.count
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let position = scrollView.contentOffset.y
+        if position > (comicTableView.contentSize.height - 100 - scrollView.frame.size.height) {
+            let loadStep = Constant.loadStep
+            self.defaultLimit += loadStep
+            self.loadMore()
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

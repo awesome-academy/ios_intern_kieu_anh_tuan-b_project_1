@@ -94,6 +94,62 @@ class APICaller {
         task.resume()
     }
 
+    func loadMoreOverviewInformation(loadMore: String, categoryType: CategoryType,
+                                     completion: @escaping (Result<[OverviewInformation], Error>) -> Void) {
+
+        guard let apiIdentifier = self.apiIdentifier() else {
+            return
+        }
+
+        let categoryIdentifier = "/v1/public/\(categoryType.rawValue)"
+
+        guard let url = URL(
+                string: "\(Endpoint.baseURL)\(categoryIdentifier)?offset=\(loadMore)&\(apiIdentifier)")
+        else { return }
+
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            do {
+                let results = try JSONDecoder().decode(OverviewData.self, from: data)
+                completion(.success(results.data.results))
+            } catch {
+                completion(.failure(APIError.failedToGetData))
+            }
+        }
+
+        task.resume()
+    }
+
+    func loadMoreInformation<T: Decodable>(loadMore: String, dataType: T.Type, categoryType: CategoryType,
+                                           completion: @escaping (Result<T, Error>) -> Void) {
+
+        guard let apiIdentifier = self.apiIdentifier() else {
+            return
+        }
+
+        let categoryIdentifier = "/v1/public/\(categoryType.rawValue)"
+
+        guard let url = URL(
+                string: "\(Endpoint.baseURL)\(categoryIdentifier)?offset=\(loadMore)&\(apiIdentifier)")
+        else { return }
+
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
+            guard let data = data, error == nil else {
+                return
+            }
+
+            do {
+                let results = try JSONDecoder().decode(dataType.self, from: data)
+                completion(.success(results))
+            } catch {
+                completion(.failure(APIError.failedToGetData))
+            }
+        }
+        task.resume()
+    }
+
     func getSectionDetail(url: String,
                           completion: @escaping (Result<[OverviewInformation], Error>) -> Void) {
 
