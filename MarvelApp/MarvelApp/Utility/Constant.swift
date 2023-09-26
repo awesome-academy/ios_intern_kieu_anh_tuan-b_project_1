@@ -21,6 +21,8 @@ struct Constant {
     static let imageDetailSize = CGFloat(120)
     static let expandRows = 2
     static let defaultRows = 1
+    static let defaultLimit = 20
+    static let loadStep = 20
     static let emptyString = ""
     static let notificationToFavorite = "favoriteChange"
     static let notificationToComic = "comicChange"

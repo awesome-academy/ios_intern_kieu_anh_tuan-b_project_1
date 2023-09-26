@@ -17,6 +17,7 @@ final class SearchViewController: UIViewController {
     private var searchResult: [OverviewInformation] = []
     private var searchText = ""
     private var category = CategoryType.character
+    private var defaultLimit = Constant.defaultLimit
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +60,25 @@ final class SearchViewController: UIViewController {
                 self?.showAlert(message: error.localizedDescription, controller: self)
             }
         }
+    }
+
+    private func loadMore() {
+        let queue = DispatchQueue(label: "loadMore", qos: .utility)
+        queue.async { [unowned self] in
+            APICaller.shared.loadMoreOverviewInformation(loadMore: String(defaultLimit),
+                                                         categoryType: category) {  [weak self] result in
+                switch result {
+                case .success(let results):
+                    self?.searchResult.append(contentsOf: results)
+                    DispatchQueue.main.async { [weak self] in
+                        self?.searchTableView.reloadData()
+                    }
+                case .failure(let error):
+                    self?.showAlert(message: error.localizedDescription, controller: self)
+                }
+            }
+        }
+
     }
 
     @IBAction private func characterButtonTapped(_ sender: Any) {
@@ -106,6 +126,15 @@ extension SearchViewController: UITableViewDataSource {
             return cell
         }
         return UITableViewCell()
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let position = scrollView.contentOffset.y
+        if position > (searchTableView.contentSize.height - 100 - scrollView.frame.size.height) {
+            let loadStep = Constant.loadStep
+            self.defaultLimit += loadStep
+            self.loadMore()
+        }
     }
 }
 
