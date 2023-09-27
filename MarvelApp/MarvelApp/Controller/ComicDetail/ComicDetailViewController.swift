@@ -8,9 +8,10 @@
 import UIKit
 
 final class ComicDetailViewController: UIViewController {
-    private var comic: Comic?
+    var comic: Comic?
 
-    @IBOutlet private weak var comicPreviewTableView: UITableView!
+    @IBOutlet weak var comicPreviewTableView: UITableView!
+    @IBOutlet weak var backButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()

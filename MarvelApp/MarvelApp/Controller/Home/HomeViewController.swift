@@ -8,11 +8,11 @@
 import UIKit
 
 final class HomeViewController: UIViewController {
-    @IBOutlet private weak var homeTableView: UITableView!
+    @IBOutlet weak var homeTableView: UITableView!
 
-    private var slides: [Character] = []
+    var slides: [Character] = []
 
-    private let sectionTitles = ["Heroes", "Creators", "Events", "Series"]
+    let sectionTitles = ["Heroes", "Creators", "Events", "Series"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +35,6 @@ final class HomeViewController: UIViewController {
         case .failure(let error):
             self.showAlert(message: error.localizedDescription, controller: self)
         }
-    }
-}
-
-extension HomeViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return slides.count
     }
 }
 

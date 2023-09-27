@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InformationDetailViewController" customModule="MarvelApp" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="Haq-PM-vMV" id="MZw-kb-RfY"/>
                 <outlet property="detailTableView" destination="4pM-5n-jyp" id="cqh-mT-0pg"/>
                 <outlet property="view" destination="iN0-l3-epB" id="WOD-ND-Vt7"/>
             </connections>

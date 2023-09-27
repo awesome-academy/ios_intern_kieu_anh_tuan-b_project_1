@@ -8,9 +8,9 @@
 import UIKit
 
 final class ComicViewController: UIViewController {
-    @IBOutlet private weak var comicTableView: UITableView!
+    @IBOutlet weak var comicTableView: UITableView!
 
-    private var comics = [Comic]()
+    var comics = [Comic]()
     private var defaultLimit = Constant.defaultLimit
 
     override func viewDidLoad() {
@@ -30,7 +30,7 @@ final class ComicViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
 
-    private func addNotificationObserver() {
+    func addNotificationObserver() {
         NotificationCenter.default.addObserver(
             forName: NSNotification.Name(Constant.notificationToComic),
             object: nil, queue: nil) { [weak self] _ in
@@ -38,7 +38,7 @@ final class ComicViewController: UIViewController {
         }
     }
 
-    private func getComics() {
+    func getComics() {
         APICaller.shared.getInformation(dataType: ComicsData.self,
                                         categoryType: CategoryType.comic) { [weak self] result in
             switch result {
@@ -53,7 +53,7 @@ final class ComicViewController: UIViewController {
         }
     }
 
-    private func loadMore() {
+    func loadMore() {
         let queue = DispatchQueue(label: "loadMoreComic", qos: .utility)
         queue.async { [unowned self] in
             APICaller.shared.loadMoreInformation(loadMore: String(defaultLimit), dataType: ComicsData.self,

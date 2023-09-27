@@ -14,13 +14,14 @@ struct CellData {
 }
 
 final class InformationDetailViewController: UIViewController {
-    @IBOutlet private weak var detailTableView: UITableView!
+    @IBOutlet weak var detailTableView: UITableView!
+    @IBOutlet weak var backButton: UIButton!
 
-    private var detailTableViewData = [CellData]()
+    var detailTableViewData = [CellData]()
 
-    private var overviewInformation: OverviewInformation?
+    var overviewInformation: OverviewInformation?
 
-    private var nibFiles = [
+    var nibFiles = [
         NibFile(nibName: String(describing: InformationImageTableViewCell.self), identifier: "informationImage"),
         NibFile(nibName: String(describing: InformationSectionTableViewCell.self), identifier: "informationSection"),
         NibFile(nibName: String(describing: InformationDetailTableViewCell.self), identifier: "informationDetail"),
@@ -42,11 +43,11 @@ final class InformationDetailViewController: UIViewController {
         self.overviewInformation = overviewInformation
     }
 
-    @IBAction private func backButtonTapped(_ sender: Any) {
+    @IBAction func backButtonTapped(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
 
-    private func configureData() {
+    func configureData() {
         if let description = overviewInformation?.description, description != "" {
             detailTableViewData.append(
                 CellData(
@@ -103,7 +104,7 @@ final class InformationDetailViewController: UIViewController {
         }
     }
 
-    private func configureCell(result: Result<[OverviewInformation], Error>, cell: MediaDetailTableViewCell) {
+    func configureCell(result: Result<[OverviewInformation], Error>, cell: MediaDetailTableViewCell) {
         switch result {
         case .success(let value):
             cell.configure(value)
