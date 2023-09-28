@@ -8,16 +8,16 @@
 import UIKit
 
 final class SearchViewController: UIViewController {
-    @IBOutlet private weak var searchBar: UISearchBar!
-    @IBOutlet private weak var searchTableView: UITableView!
-    @IBOutlet private weak var characterButton: UIButton!
-    @IBOutlet private weak var creatorButton: UIButton!
-    @IBOutlet private weak var comicButton: UIButton!
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var searchTableView: UITableView!
+    @IBOutlet weak var characterButton: UIButton!
+    @IBOutlet weak var creatorButton: UIButton!
+    @IBOutlet weak var comicButton: UIButton!
 
-    private var searchResult: [OverviewInformation] = []
-    private var searchText = ""
-    private var category = CategoryType.character
-    private var defaultLimit = Constant.defaultLimit
+    var searchResult: [OverviewInformation] = []
+    var searchText = ""
+    var category = CategoryType.character
+    var defaultLimit = Constant.defaultLimit
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ final class SearchViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
-    private func setupUI() {
+    func setupUI() {
         searchBar.customizeView()
         characterButton.applyBorderOutline()
         creatorButton.applyBorderOutline()
@@ -40,14 +40,14 @@ final class SearchViewController: UIViewController {
         characterButton.setSelected()
     }
 
-    private func setSelectedButton(_ selectedButton: UIButton) {
+    func setSelectedButton(_ selectedButton: UIButton) {
         let buttons = [characterButton, creatorButton, comicButton]
         for button in buttons {
             button == selectedButton ? button?.setSelected() : button?.setDeselected()
         }
     }
 
-    private func getSearchResult() {
+    func getSearchResult() {
         APICaller.shared.getOverviewInformation(searchValue: searchText,
                                                 categoryType: category) { [weak self] result in
             switch result {
@@ -62,7 +62,7 @@ final class SearchViewController: UIViewController {
         }
     }
 
-    private func loadMore() {
+    func loadMore() {
         let queue = DispatchQueue(label: "loadMore", qos: .utility)
         queue.async { [unowned self] in
             APICaller.shared.loadMoreOverviewInformation(loadMore: String(defaultLimit),
@@ -81,19 +81,19 @@ final class SearchViewController: UIViewController {
 
     }
 
-    @IBAction private func characterButtonTapped(_ sender: Any) {
+    @IBAction func characterButtonTapped(_ sender: Any) {
         category = CategoryType.character
         setSelectedButton(characterButton)
         getSearchResult()
     }
 
-    @IBAction private func creatorButtonTapped(_ sender: Any) {
+    @IBAction func creatorButtonTapped(_ sender: Any) {
         category = CategoryType.creator
         setSelectedButton(creatorButton)
         getSearchResult()
     }
 
-    @IBAction private func comicButtonTapped(_ sender: Any) {
+    @IBAction func comicButtonTapped(_ sender: Any) {
         category = CategoryType.comic
         setSelectedButton(comicButton)
         getSearchResult()

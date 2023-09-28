@@ -9,9 +9,9 @@ import UIKit
 
 final class FavoriteViewController: UIViewController {
 
-    @IBOutlet private weak var favoriteTableView: UITableView!
+    @IBOutlet weak var favoriteTableView: UITableView!
 
-    private var favoriteItems = [Item]()
+    var favoriteItems = [Item]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ final class FavoriteViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
 
-    private func addNotificationObserver() {
+    func addNotificationObserver() {
         NotificationCenter.default.addObserver(
             forName: NSNotification.Name(Constant.notificationToFavorite),
             object: nil, queue: nil) { [weak self] _ in
@@ -37,7 +37,7 @@ final class FavoriteViewController: UIViewController {
         }
     }
 
-    private func configureFavoriteTable() {
+    func configureFavoriteTable() {
         DataPersistenceManager.shared.fetchFromDatabase { [weak self] result in
             switch result {
             case .success(let favoriteItems):
